@@ -103,6 +103,19 @@ namespace UnityStandardAssets._2D
                 int deathHash = Animator.StringToHash("Death");
                 m_Anim.SetTrigger(deathHash);
                 diedText();
+            }else
+            {
+                Application.LoadLevel(col.gameObject.name);
+            }
+        }
+        void OnCollisionEnter2D(Collision2D col)
+        {
+            if (col.gameObject.name == "saw" || col.gameObject.name == "spike")
+            {
+                gameObject.GetComponent<Platformer2DUserControl>().enabled = false;
+                int deathHash = Animator.StringToHash("Death");
+                m_Anim.SetTrigger(deathHash);
+                diedText();
             }
         }
 
@@ -138,7 +151,7 @@ namespace UnityStandardAssets._2D
         IEnumerator Mess()
         {
             vis = true;
-            yield return new WaitForSeconds(3);
+            yield return new WaitForSeconds(2);
             vis = false;
         }
         void OnGUI()
