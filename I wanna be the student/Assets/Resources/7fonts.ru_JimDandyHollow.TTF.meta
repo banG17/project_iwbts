@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 414dd84a2edc2a140b6242c5201a5cd9
+timeCreated: 1488813434
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 60
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Jim DandyHollow
+  fontNames:
+  - Jim DandyHollow
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

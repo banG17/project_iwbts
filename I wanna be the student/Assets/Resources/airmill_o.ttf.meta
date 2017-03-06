@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: eab2321afde13044c96e2adf55bac2c6
+timeCreated: 1488813074
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 60
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Air Millhouse Outline
+  fontNames:
+  - Air Millhouse Outline
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: f783a5660bb43f44a836185e505701ce
+timeCreated: 1488813074
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 60
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Air Millhouse  Italic
+  fontNames:
+  - Air Millhouse  Italic
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

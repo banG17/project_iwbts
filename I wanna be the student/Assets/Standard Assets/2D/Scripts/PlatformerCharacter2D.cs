@@ -110,7 +110,7 @@ namespace UnityStandardAssets._2D
         }
         void OnCollisionEnter2D(Collision2D col)
         {
-            if (col.gameObject.name == "saw" || col.gameObject.name == "spike")
+            if (col.gameObject.name == "saw" || col.gameObject.name == "spike" || col.gameObject.name == "spike_wall")
             {
                 gameObject.GetComponent<Platformer2DUserControl>().enabled = false;
                 int deathHash = Animator.StringToHash("Death");
@@ -126,9 +126,9 @@ namespace UnityStandardAssets._2D
 
         private void spawn()
         {
-            transform.position = new Vector3(spawnX, spawnY, transform.position.z);
             gameObject.GetComponent<Platformer2DUserControl>().enabled = true;
             m_Rigidbody2D.bodyType = RigidbodyType2D.Dynamic;
+            Application.LoadLevel(Application.loadedLevel);
         }
 
         private void Flip()
@@ -156,9 +156,13 @@ namespace UnityStandardAssets._2D
         }
         void OnGUI()
         {
+            Font myFont = (Font)Resources.Load("air_mitalic", typeof(Font));
             if (vis)
             {
+                diedstyle.font = myFont;
                 diedstyle.fontSize = 60;
+                diedstyle.normal.textColor = Color.white;
+                GUI.color = Color.white;
                 GUI.Label(new Rect(Screen.width / 2 -150, Screen.height/2-200, 600, 150), "LOL U DIED",diedstyle);
             }
 
