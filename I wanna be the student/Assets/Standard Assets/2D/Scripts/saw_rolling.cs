@@ -11,6 +11,6 @@ public class saw_rolling : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        transform.Rotate(new Vector3(0f,0f,1f));
+        transform.Rotate(new Vector3(0f,0f,2f));
 	}
 }
