@@ -23,4 +23,12 @@ public class saw_move_verticaly : MonoBehaviour {
         if (!turn) m_Rigidbody2D.velocity = new Vector2(m_Rigidbody2D.velocity.x, 1f*speed); 
         else m_Rigidbody2D.velocity = new Vector2(m_Rigidbody2D.velocity.x, -1f*speed);
     }
+
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "Player")
+        {
+            gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+        }
+    }
 }

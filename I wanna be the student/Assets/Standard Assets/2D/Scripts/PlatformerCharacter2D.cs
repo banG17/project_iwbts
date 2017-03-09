@@ -112,9 +112,9 @@ namespace UnityStandardAssets._2D
         {
             if (col.gameObject.name == "saw" || col.gameObject.name == "spike" || col.gameObject.name == "spike_wall")
             {
-                gameObject.GetComponent<Platformer2DUserControl>().enabled = false;
                 int deathHash = Animator.StringToHash("Death");
                 m_Anim.SetTrigger(deathHash);
+                gameObject.GetComponent<Platformer2DUserControl>().enabled = false;
                 diedText();
             }
         }

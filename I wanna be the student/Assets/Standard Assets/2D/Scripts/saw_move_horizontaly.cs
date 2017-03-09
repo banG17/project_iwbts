@@ -23,4 +23,11 @@ public class saw_move_horizontaly : MonoBehaviour {
         if (!turn) m_Rigidbody2D.velocity = new Vector2(1f*speed, m_Rigidbody2D.velocity.y);
         else m_Rigidbody2D.velocity = new Vector2(-1f*speed, m_Rigidbody2D.velocity.y);
     }
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        if (col.gameObject.tag == "Player")
+        {
+            gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+        }
+    }
 }
