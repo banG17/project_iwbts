@@ -42,7 +42,7 @@ public class loaded_level : MonoBehaviour {
             lvl.fontSize = 60;
             lvl.normal.textColor = Color.white;
             GUI.color = Color.white;
-            GUI.Label(new Rect(Screen.width / 2 - 10*levelS.Length, Screen.height / 2 - 200, 600, 150), levelS, lvl);
+            GUI.Label(new Rect(Screen.width / 2 - 10*levelS.Length, Screen.height / 2 - (Screen.height/100)*45, 600, 150), levelS, lvl);
         }
 
     }
