@@ -18,7 +18,7 @@ public class became_static : MonoBehaviour {
     {
         if (col.gameObject.tag == "Player")
         {
-            gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+            //gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
         }
     }
 }

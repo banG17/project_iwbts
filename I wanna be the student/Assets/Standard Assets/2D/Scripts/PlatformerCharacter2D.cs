@@ -40,10 +40,10 @@ namespace UnityStandardAssets._2D
             Collider2D[] colliders = Physics2D.OverlapCircleAll(m_GroundCheck.position, k_GroundedRadius, m_WhatIsGround);
             for (int i = 0; i < colliders.Length; i++)
             {
-                if (colliders[i].gameObject != gameObject)
+                if (colliders[i].gameObject != gameObject /*&& m_Anim.GetParameter(4).Equals(false)*/)
                     m_Grounded = true;
             }
-            m_Anim.SetBool("Ground", m_Grounded);
+           m_Anim.SetBool("Ground", m_Grounded);
 
             // Set the vertical animation
             m_Anim.SetFloat("vSpeed", m_Rigidbody2D.velocity.y);
@@ -100,8 +100,7 @@ namespace UnityStandardAssets._2D
             if (col.gameObject.name == "diecollider")
             {
                 gameObject.GetComponent<Platformer2DUserControl>().enabled = false;
-                int deathHash = Animator.StringToHash("Death");
-                m_Anim.SetTrigger(deathHash);
+                m_Anim.SetBool("death", true);
                 diedText();
             }else
             {
@@ -112,8 +111,7 @@ namespace UnityStandardAssets._2D
         {
             if (col.gameObject.name == "saw" || col.gameObject.name == "spike" || col.gameObject.name == "spike_wall")
             {
-                int deathHash = Animator.StringToHash("Death");
-                m_Anim.SetTrigger(deathHash);
+                m_Anim.SetBool("death", true);
                 gameObject.GetComponent<Platformer2DUserControl>().enabled = false;
                 diedText();
             }
@@ -126,9 +124,10 @@ namespace UnityStandardAssets._2D
 
         private void spawn()
         {
+            Application.LoadLevel(Application.loadedLevel);
+            m_Anim.SetBool("death", false);
             gameObject.GetComponent<Platformer2DUserControl>().enabled = true;
             m_Rigidbody2D.bodyType = RigidbodyType2D.Dynamic;
-            Application.LoadLevel(Application.loadedLevel);
         }
 
         private void Flip()

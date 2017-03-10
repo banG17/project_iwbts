@@ -9,8 +9,8 @@ public class laser : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        InvokeRepeating("beam_anable", 0, time_on);
-        InvokeRepeating("beam_disable", time_off, time_on);
+        InvokeRepeating("beam_anable", 0, time_off);
+        InvokeRepeating("beam_disable", time_on, time_off);
     }
 	
 	// Update is called once per frame

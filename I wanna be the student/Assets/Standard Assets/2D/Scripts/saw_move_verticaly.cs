@@ -28,7 +28,7 @@ public class saw_move_verticaly : MonoBehaviour {
     {
         if (col.gameObject.tag == "Player")
         {
-            gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+            //gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
         }
     }
 }
