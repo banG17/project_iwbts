@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class saw_move_horizontaly : MonoBehaviour {
+public class move_horizontaly : MonoBehaviour {
     [SerializeField]private float from = 0;
     [SerializeField]private float to = 0;
     [SerializeField]private float speed = 0;
+    [SerializeField]private bool turn = false;
 
     private Rigidbody2D m_Rigidbody2D;
-    private bool turn = false;
 
     // Use this for initialization
     void Start () {

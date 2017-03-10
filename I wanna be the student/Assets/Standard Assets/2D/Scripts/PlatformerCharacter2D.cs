@@ -109,7 +109,7 @@ namespace UnityStandardAssets._2D
         }
         void OnCollisionEnter2D(Collision2D col)
         {
-            if (col.gameObject.name == "saw" || col.gameObject.name == "spike" || col.gameObject.name == "spike_wall")
+            if (col.gameObject.name == "saw" || col.gameObject.name == "spike" || col.gameObject.name == "spike_wall" || col.gameObject.name == "beam" || col.gameObject.name == "laser")
             {
                 m_Anim.SetBool("death", true);
                 gameObject.GetComponent<Platformer2DUserControl>().enabled = false;
