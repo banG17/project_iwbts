@@ -25,12 +25,14 @@ public class laser : MonoBehaviour {
         gameObject.transform.Find("preshot").Find("pre1").GetComponent<SpriteRenderer>().enabled = false;
         gameObject.transform.Find("beam").GetComponent<SpriteRenderer>().enabled = true;
         gameObject.transform.Find("beam").GetComponent<PolygonCollider2D>().enabled = true;
+        
+        
     }
 
     void beam_disable()
     {
-        gameObject.transform.Find("beam").GetComponent<SpriteRenderer>().enabled = false;
         gameObject.transform.Find("beam").GetComponent<PolygonCollider2D>().enabled = false;
+        gameObject.transform.Find("beam").GetComponent<SpriteRenderer>().enabled = false;
     }
 
     void pre_beam_anable()

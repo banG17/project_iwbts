@@ -21,8 +21,15 @@ public class falling_spike : MonoBehaviour {
     {
         if (col.gameObject.tag == "Player")
         {
-            m_Rigidbody2D = spike.GetComponent<Rigidbody2D>();
-            m_Rigidbody2D.bodyType = RigidbodyType2D.Dynamic; ;
+            if (spike.name == "spike_wall")
+            {
+                spike.GetComponent<moving_wall>().enabled = true;
+            }
+            else
+            {
+                m_Rigidbody2D = spike.GetComponent<Rigidbody2D>();
+                m_Rigidbody2D.bodyType = RigidbodyType2D.Dynamic; ;
+            }
         }
     }
 }
