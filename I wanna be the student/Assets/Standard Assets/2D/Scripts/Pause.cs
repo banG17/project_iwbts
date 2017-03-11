@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityStandardAssets.ImageEffects;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class Pause : MonoBehaviour
 {
@@ -22,7 +23,7 @@ public class Pause : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (CrossPlatformInputManager.GetButtonDown("Pause"))
         {
             if (!menu)
             {
