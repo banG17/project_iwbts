@@ -2,6 +2,8 @@
 using System.Collections;
 using UnityStandardAssets.ImageEffects;
 using UnityStandardAssets.CrossPlatformInput;
+using UnityEngine.UI;
+using System;
 
 public class Pause : MonoBehaviour
 {
@@ -67,12 +69,19 @@ public class Pause : MonoBehaviour
 
                 if (GUI.Button(new Rect(Screen.width / 2 - 70, Screen.height / 2 - 40, 170, 30), "MANUAL"))
                 {
-
+                   
+                    window = 1;
                 }
 
                 if (GUI.Button(new Rect(Screen.width / 2 - 70, Screen.height / 2 - 0, 170, 30), "EXIT"))
                 {
                     Application.Quit();
+                }
+                if (window == 1)
+                {
+                    GameObject.FindGameObjectWithTag("Player").GetComponent<SpriteRenderer>().enabled = false;
+                    BF.enabled = false;
+                    GameObject.FindGameObjectWithTag("Manual").GetComponent<Image>().enabled = true;   
                 }
             }
         }
