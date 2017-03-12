@@ -162,7 +162,7 @@ namespace UnityStandardAssets._2D
                 diedstyle.fontSize = 60;
                 diedstyle.normal.textColor = Color.white;
                 GUI.color = Color.white;
-                GUI.Label(new Rect(Screen.width / 2 - 150, Screen.height / 2 - (Screen.height / 100) * 45, 600, 150), "LOL U DIED", diedstyle);
+                GUI.Label(new Rect(Screen.width / 2 - 70, Screen.height / 2 - (Screen.height / 100) * 35, 600, 150), "lol u died", diedstyle);
             }
 
         }
