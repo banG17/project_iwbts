@@ -74,7 +74,7 @@ public class Pause : MonoBehaviour
                 }
                 if (window == 1)
                 {
-                    GameObject.FindGameObjectWithTag("Player").GetComponent<SpriteRenderer>().enabled = false;
+                    GameObject.FindGameObjectWithTag("Player").GetComponent<SpriteRenderer>().enabled = true;
                     BF.enabled = false;
                     GameObject.FindGameObjectWithTag("Manual").GetComponent<Image>().enabled = true;   
                 }
