@@ -10,7 +10,7 @@ public class NewBehaviourScript : MonoBehaviour
 
     public void StartGame()
     {
-        Application.LoadLevel(1);
+        Application.LoadLevel("scene");
     }
 
     public void ManualShow()

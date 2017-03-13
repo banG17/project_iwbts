@@ -20,11 +20,12 @@ public class submit : MonoBehaviour {
 
     void TaskOnClick()
     {
-        
+        bool valid=true;
         Text t = myText.GetComponent<Text>();
         Text d = deaths.GetComponent<Text>();
         InputField inp = myInput.GetComponent<InputField>();
-        if (inp.text == "") t.color = Color.red;
+        for (int i = 0; i < inp.text.Length; i++) if (inp.text[i] == ' ') valid = false;
+        if (inp.text == "" || !valid) t.color = Color.red;
         else
         {
             t.color = Color.white;
