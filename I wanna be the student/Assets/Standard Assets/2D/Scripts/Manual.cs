@@ -18,7 +18,6 @@ public class Manual : MonoBehaviour {
             {
                 GameObject.FindGameObjectWithTag("Manual").GetComponent<Image>().enabled = false;
                 GameObject.FindGameObjectWithTag("Player").GetComponent<SpriteRenderer>().enabled = true;
-                
             }
 
             

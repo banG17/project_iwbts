@@ -15,7 +15,13 @@ public class NewBehaviourScript : MonoBehaviour
 
     public void ManualShow()
     {
-        GameObject.FindGameObjectWithTag("Manual").GetComponent<Image>().enabled = true;  
+        GameObject.FindGameObjectWithTag("Zagolovok").GetComponent<Text>().enabled = false;
+        GameObject.FindGameObjectWithTag("Manual").GetComponent<Image>().enabled = true;
+    }
+
+    public void ScoreBoardShow()
+    {
+        Application.LoadLevel("ScoreBoard");
     }
 
     public void ExitGame()
