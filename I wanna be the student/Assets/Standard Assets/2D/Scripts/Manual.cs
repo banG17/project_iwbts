@@ -6,6 +6,7 @@ using UnityEngine.UI;
 using System;
 
 public class Manual : MonoBehaviour {
+    private Blur BF;
 
 	// Use this for initialization
 	void Start () {
@@ -16,7 +17,9 @@ public class Manual : MonoBehaviour {
 	void Update () {
 		    if(Input.GetKeyDown(KeyCode.Escape) && GameObject.FindGameObjectWithTag("Manual").GetComponent<Image>().enabled)
             {
-                GameObject.FindGameObjectWithTag("Manual").GetComponent<Image>().enabled = false;
+            BF = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Blur>();
+            BF.enabled = false;
+            GameObject.FindGameObjectWithTag("Manual").GetComponent<Image>().enabled = false;
                 GameObject.FindGameObjectWithTag("Player").GetComponent<SpriteRenderer>().enabled = true;
             }
 
