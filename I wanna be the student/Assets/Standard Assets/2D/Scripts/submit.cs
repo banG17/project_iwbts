@@ -34,6 +34,7 @@ public class submit : MonoBehaviour {
             sw = f.AppendText();
             sw.WriteLine(inp.text+" "+d.text);
             sw.Close();
+            death_count.death = 0;
             Application.LoadLevel("menu");
         }
     }

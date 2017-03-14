@@ -11,3 +11,5 @@ Goriak 322
 Olegaster 1
 Wraith_King 20
 HZ 7
+MAzur 2
+Vania 2
